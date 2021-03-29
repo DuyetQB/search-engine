@@ -105,7 +105,13 @@ html.innerHTML = `
 }
 
 }
+// function seeText(datas){
+//     return datas.map(data =>{
+//         return data.replace(/[a-z]/g);
+//     })
 
+// }
+// seeText(datas);
 input.addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.keyCode === 13) {
