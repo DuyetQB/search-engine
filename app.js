@@ -57,9 +57,9 @@ function myFunction() {
 
      let result = menu.indexOf(output);
      
+     
 
 
-console.log(menu[result][0].toLowerCase())
 
     //tim vi tri xuat hien cua chuoi blog
     //  document.getElementById("demo").innerHTML =  menu[result]
@@ -76,16 +76,24 @@ html.className = 'main';
 
 if (output !== menu[result]){
     
-    html.innerHTML = 'Không có dữ liệu'
+    html.innerHTML = '<p>Không có dữ liệu</p>'
  }
  
  
  //  output[0].toLowerCase() !== menu[result][0]);
+// else if (output[0] === menu[result][0].toLowerCase() ){
+// console.log('output is the same')
+// console.log(output[0] );
+// console.log( menu[result][0]);
 
+// }
 
-else{
+// if(output['a-z'] == menu[result][0]){
 
-    html.innerHTML = `
+// }
+
+else {
+html.innerHTML = `
 
 <h1 id='main-name'>${menu[result] }</h1>
 <p>giá :${datas[result].price} k</p> 
@@ -97,6 +105,16 @@ else{
 }
 
 }
+
+input.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      document.getElementById("myBtn").click();
+    }
+  }); 
 /* <img src ='${datas[result].src}'/>  */
 
 
