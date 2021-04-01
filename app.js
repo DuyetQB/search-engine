@@ -38,7 +38,7 @@ let datas = [
 ];
 
 let menu = datas.map(element=>
-    element.name
+    element.name.toLowerCase()
    
 );
 // document.getElementById("demo").innerHTML = menu;
@@ -55,17 +55,9 @@ function myFunction() {
 
     
 
-     let result = menu.indexOf(output);
+     let result = menu.indexOf(output.toLowerCase());
      
-     
 
-
-
-    //tim vi tri xuat hien cua chuoi blog
-    //  document.getElementById("demo").innerHTML =  menu[result]
-
-    // console.log(menu.indexOf(output));
-    
     
     let html = document.createElement('div');
 content.appendChild(html);
@@ -73,8 +65,7 @@ content.appendChild(html);
 html.className = 'main';
 
 
-
-if (output !== menu[result]){
+if (output.toLowerCase() !== menu[result].toLowerCase()){
     
     html.innerHTML = '<p>Không có dữ liệu</p>'
  }
